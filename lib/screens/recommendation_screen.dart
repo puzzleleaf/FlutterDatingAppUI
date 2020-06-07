@@ -1,7 +1,7 @@
 import 'package:dating_app/screens/recommendation_detail_screen.dart';
 import 'package:dating_app/widgets/bottom_nav.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/screenutil.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class RecommendationScreen extends StatelessWidget {
   @override
@@ -10,43 +10,8 @@ class RecommendationScreen extends StatelessWidget {
 
     return Scaffold(
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
-          Container(
-            alignment: Alignment.topCenter,
-            height: ScreenUtil().setHeight(137),
-            padding: EdgeInsets.only(
-              right: ScreenUtil().setWidth(24),
-              left: ScreenUtil().setWidth(24),
-              top: ScreenUtil().setHeight(56),
-            ),
-            child: Container(
-              height: ScreenUtil().setHeight(34),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Image.asset(
-                    'assets/images/gridicons_user.png',
-                    width: ScreenUtil().setWidth(24),
-                    height: ScreenUtil().setHeight(24),
-                  ),
-                  Text(
-                    'For You',
-                    style: TextStyle(
-                      fontSize: ScreenUtil().setSp(24),
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xff4E4B6F),
-                    ),
-                  ),
-                  Image.asset(
-                    'assets/images/chatbubble.png',
-                    width: ScreenUtil().setWidth(24),
-                    height: ScreenUtil().setHeight(24),
-                  ),
-                ],
-              ),
-            ),
-          ),
+          _appBar(),
           GestureDetector(
             onTap: () {
               Navigator.push(context, MaterialPageRoute(builder: (_) {
@@ -71,13 +36,13 @@ class RecommendationScreen extends StatelessWidget {
                     width: ScreenUtil().setWidth(342),
                     height: ScreenUtil().setHeight(104),
                     decoration: BoxDecoration(
+                      color: Colors.white.withOpacity(0.9),
                       borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(20),
                         topLeft: Radius.circular(20),
                       ),
-                      color: Colors.white.withOpacity(0.9),
                     ),
-                    child: Padding(
+                    child: Container(
                       padding: EdgeInsets.only(
                         left: ScreenUtil().setWidth(22),
                         top: ScreenUtil().setHeight(24),
@@ -102,7 +67,7 @@ class RecommendationScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),
@@ -117,6 +82,43 @@ class RecommendationScreen extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  Widget _appBar() {
+    return Container(
+      height: ScreenUtil().setHeight(137),
+      padding: EdgeInsets.only(
+        left: ScreenUtil().setWidth(24),
+        right: ScreenUtil().setWidth(24),
+        top: ScreenUtil().setHeight(56),
+      ),
+      child: Container(
+        height: ScreenUtil().setHeight(34),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Image.asset(
+              'assets/images/gridicons_user.png',
+              width: ScreenUtil().setWidth(24),
+              height: ScreenUtil().setHeight(24),
+            ),
+            Text(
+              'For You',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: Color(0xff4e486f),
+              ),
+            ),
+            Image.asset(
+              'assets/images/chatbubble.png',
+              width: ScreenUtil().setWidth(24),
+              height: ScreenUtil().setHeight(24),
+            ),
+          ],
+        ),
       ),
     );
   }

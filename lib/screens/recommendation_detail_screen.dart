@@ -11,17 +11,16 @@ class RecommendationDetailScreen extends StatelessWidget {
         children: <Widget>[
           SingleChildScrollView(
             child: Container(
-              padding: EdgeInsets.only(
-                bottom: ScreenUtil().setHeight(128),
-              ),
+              padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(137)),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
                   Align(
                     alignment: Alignment.topRight,
                     child: ClipRRect(
-                      borderRadius:
-                          BorderRadius.only(bottomLeft: Radius.circular(20)),
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(20),
+                      ),
                       child: Image.asset(
                         'assets/images/detail1.png',
                         width: ScreenUtil().setWidth(390),
@@ -37,46 +36,42 @@ class RecommendationDetailScreen extends StatelessWidget {
                     ),
                     child: RichText(
                       text: TextSpan(
-                        style: TextStyle(
-                          height: 1.6,
-                          color: Color(0xff16123D),
-                        ),
-                        children: <TextSpan>[
-                          TextSpan(
-                            text: 'Malena Veronica, 23',
-                            style: TextStyle(
-                              fontSize: ScreenUtil().setSp(24),
-                              fontWeight: FontWeight.bold,
-                            ),
+                          style: TextStyle(
+                            height: 1.4,
+                            color: Color(0xff16123d),
                           ),
-                          TextSpan(
-                            text: ' ●\n',
-                            style: TextStyle(
-                              color: Color(0xff15d374),
-                              fontSize: 20,
-                            ),
-                          ),
-                          TextSpan(
-                            text: 'Fashion Designer at Victoria\'s Secret\n',
-                            style: TextStyle(
-                              fontSize: ScreenUtil().setSp(16),
-                            ),
-                          ),
-                          TextSpan(
-                            text: '69m away',
-                            style: TextStyle(
-                              fontSize: ScreenUtil().setSp(16),
-                            ),
-                          ),
-                        ],
-                      ),
+                          children: <TextSpan>[
+                            TextSpan(
+                                text: 'Malena Veronica, 23',
+                                style: TextStyle(
+                                  fontSize: ScreenUtil().setSp(24),
+                                  fontWeight: FontWeight.bold,
+                                )),
+                            TextSpan(
+                                text: ' ● \n',
+                                style: TextStyle(
+                                  fontSize: ScreenUtil().setSp(20),
+                                  color: Color(0xff15d374),
+                                )),
+                            TextSpan(
+                                text:
+                                'Fashion Designer at Victoria\'s Secret\n',
+                                style: TextStyle(
+                                  fontSize: ScreenUtil().setSp(16),
+                                )),
+                            TextSpan(
+                                text: '69m away',
+                                style: TextStyle(
+                                  fontSize: ScreenUtil().setSp(16),
+                                )),
+                          ]),
                     ),
                   ),
                   Container(
                     padding: EdgeInsets.only(
                       left: ScreenUtil().setWidth(24),
                       top: ScreenUtil().setHeight(14),
-                      right: ScreenUtil().setHeight(14),
+                      right: ScreenUtil().setWidth(24),
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -86,7 +81,7 @@ class RecommendationDetailScreen extends StatelessWidget {
                           style: TextStyle(
                             fontSize: ScreenUtil().setSp(18),
                             fontWeight: FontWeight.w500,
-                            color: Color(0xff4E4B6F),
+                            color: Color(0xff4e4b6f),
                           ),
                         ),
                         SizedBox(
@@ -95,17 +90,16 @@ class RecommendationDetailScreen extends StatelessWidget {
                         RichText(
                           text: TextSpan(
                             style: TextStyle(
-                              color: Color(0xff4E4B6F),
-                              height: 1.4,
+                              color: Color(0xff4e4b6f),
                             ),
                             children: <TextSpan>[
                               TextSpan(
                                 text:
-                                    'Hey guys, This is Malena. I\'m hero to find someone for hookup. I\'m not interested in something serious.\nI would love to hear your adventurous story.',
+                                'Hey guys, This is Malena. I\'m here to find someone for hookup. I\'m not interested in something serious. \nI would love to hear your adventurous story',
                                 style: TextStyle(
-                                  fontSize: ScreenUtil().setSp(16),
+                                  fontSize: ScreenUtil().setSp(15),
                                 ),
-                              ),
+                              )
                             ],
                           ),
                         ),
@@ -124,54 +118,55 @@ class RecommendationDetailScreen extends StatelessWidget {
                         Text(
                           'INTERESTS',
                           style: TextStyle(
-                              fontSize: ScreenUtil().setSp(18),
-                              fontWeight: FontWeight.w500,
-                              color: Color(0xff4E4B6F)),
+                            fontSize: ScreenUtil().setSp(18),
+                            fontWeight: FontWeight.w500,
+                            color: Color(0xff4e4b6f),
+                          ),
                         ),
                         SizedBox(
                           height: ScreenUtil().setHeight(14),
                         ),
                         Wrap(
-                          spacing: ScreenUtil().setWidth(12),
+                          spacing: ScreenUtil().setWidth(10),
                           runSpacing: ScreenUtil().setHeight(14),
                           children: <Widget>[
                             InterestBox(
-                              text: "Travel",
+                              text: 'Travel',
                               textColor: Color(0xffff6f59),
                               backgroundColor: Color(0xffffe9e6),
                             ),
                             InterestBox(
-                              text: "Dance",
+                              text: 'Dance',
                               textColor: Color(0xff33c0ff),
                               backgroundColor: Color(0xffe5f7ff),
                             ),
                             InterestBox(
-                              text: "Fitness",
+                              text: 'Fitness',
                               textColor: Color(0xffff9933),
                               backgroundColor: Color(0xfffff2e5),
                             ),
                             InterestBox(
-                              text: "Reading",
+                              text: 'Reading',
                               textColor: Color(0xff5985ff),
                               backgroundColor: Color(0xffe5ecff),
                             ),
                             InterestBox(
-                              text: "Photography",
+                              text: 'Photography',
                               textColor: Color(0xff9933ff),
                               backgroundColor: Color(0xfff2e5ff),
                             ),
                             InterestBox(
-                              text: "Music",
+                              text: 'Music',
                               textColor: Color(0xff12b2b2),
                               backgroundColor: Color(0xffe0ffff),
                             ),
                             InterestBox(
-                              text: "Movie",
+                              text: 'Movie',
                               textColor: Color(0xffff3377),
                               backgroundColor: Color(0xffffe5ee),
                             ),
                           ],
-                        ),
+                        )
                       ],
                     ),
                   ),
@@ -189,21 +184,22 @@ class RecommendationDetailScreen extends StatelessWidget {
                           style: TextStyle(
                             fontSize: ScreenUtil().setSp(18),
                             fontWeight: FontWeight.w500,
-                            color: Color(0xff4E4B6F),
+                            color: Color(0xff4e4b6f),
                           ),
                         ),
                         SizedBox(
                           height: ScreenUtil().setHeight(14),
                         ),
                         Wrap(
-                          spacing: 10,
+                          spacing: ScreenUtil().setWidth(10),
+                          runSpacing: ScreenUtil().setHeight(14),
                           children: <Widget>[
                             ClipRRect(
                               borderRadius: BorderRadius.circular(8),
                               child: Image.asset(
                                 'assets/images/instar1.jpg',
                                 width: ScreenUtil().setWidth(114),
-                                height: ScreenUtil().setWidth(200),
+                                height: ScreenUtil().setHeight(200),
                                 fit: BoxFit.cover,
                               ),
                             ),
@@ -212,7 +208,7 @@ class RecommendationDetailScreen extends StatelessWidget {
                               child: Image.asset(
                                 'assets/images/instar2.jpg',
                                 width: ScreenUtil().setWidth(114),
-                                height: ScreenUtil().setWidth(200),
+                                height: ScreenUtil().setHeight(200),
                                 fit: BoxFit.cover,
                               ),
                             ),
@@ -221,7 +217,7 @@ class RecommendationDetailScreen extends StatelessWidget {
                               child: Image.asset(
                                 'assets/images/instar3.jpg',
                                 width: ScreenUtil().setWidth(114),
-                                height: ScreenUtil().setWidth(200),
+                                height: ScreenUtil().setHeight(200),
                                 fit: BoxFit.cover,
                               ),
                             )
@@ -235,45 +231,18 @@ class RecommendationDetailScreen extends StatelessWidget {
             ),
           ),
           _appBar(context),
-          _bottomNav()
-//          Container(
-//            height: ScreenUtil().setHeight(137),
-//            child: BottomNav(
-//              width: ScreenUtil().setWidth(248),
-//              height: ScreenUtil().setHeight(64),
-//              size1: ScreenUtil().setWidth(64),
-//              size2: ScreenUtil().setWidth(56),
-//              size3: ScreenUtil().setWidth(64),
-//            ),
-//          ),
+          _bottomNav(),
         ],
-      ),
-    );
-  }
-
-  Widget _bottomNav() {
-    return Align(
-      alignment: Alignment.bottomCenter,
-      child: Container(
-        height: ScreenUtil().setHeight(128),
-        child: BottomNav(
-          width: ScreenUtil().setWidth(248),
-          height: ScreenUtil().setHeight(64),
-          size1: ScreenUtil().setWidth(64),
-          size2: ScreenUtil().setWidth(56),
-          size3: ScreenUtil().setWidth(64),
-        ),
       ),
     );
   }
 
   Widget _appBar(BuildContext context) {
     return Container(
-      alignment: Alignment.topCenter,
       height: ScreenUtil().setHeight(137),
       padding: EdgeInsets.only(
-        right: ScreenUtil().setWidth(24),
         left: ScreenUtil().setWidth(24),
+        right: ScreenUtil().setWidth(24),
         top: ScreenUtil().setHeight(56),
       ),
       child: Container(
@@ -281,7 +250,7 @@ class RecommendationDetailScreen extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            InkWell(
+            GestureDetector(
               onTap: () {
                 Navigator.pop(context);
               },
@@ -295,6 +264,22 @@ class RecommendationDetailScreen extends StatelessWidget {
               size: ScreenUtil().setWidth(24),
             ),
           ],
+        ),
+      ),
+    );
+  }
+
+  Widget _bottomNav() {
+    return Align(
+      alignment: Alignment.bottomCenter,
+      child: Container(
+        height: ScreenUtil().setHeight(137),
+        child: BottomNav(
+          width: ScreenUtil().setWidth(248),
+          height: ScreenUtil().setHeight(64),
+          size1: ScreenUtil().setWidth(64),
+          size2: ScreenUtil().setWidth(56),
+          size3: ScreenUtil().setWidth(64),
         ),
       ),
     );
