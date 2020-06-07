@@ -1,16 +1,21 @@
-# dating_app
+# Flutter Dating App (Responsive UI, Figma Design, Screen Util) 
+Flutter ScreenUtil was used to draw UI similarly on various devices.
+(iPhone SE2, iPhone 11 Pro, iPad and Android Emulator)
 
-A new Flutter application.
+### Package
+Flutter ScreenUtil
+- A flutter plugin for adapting screen and font size.Let your UI display a reasonable layout on different screen sizes!
+* https://pub.dev/packages/flutter_screenutil
 
-## Getting Started
+### Youtube
+[![Flutter Dating App](./readme/youtube.png)](https://youtu.be/a1vPMR0TvGk)
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+### Reference
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Design
+* https://bit.ly/30gpXCd
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Figma
+- the collaborative interface design tool.
+* https://www.figma.com
